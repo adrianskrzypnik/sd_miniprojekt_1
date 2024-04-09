@@ -9,15 +9,6 @@ void Array_list();
 void Singly_Linked_list();
 void Double_linked_list();
 
-//long long measure8ArraysAddToFront(int numberOfElements){
-//    arrayList arrayList1,
-//    long long duration = 0;
-//
-//
-//    Test test1(0);
-//    duration = test1.arrayListAddToFront(arrayList1, numberOfElements);
-
-
 
 
 int main() {
@@ -49,9 +40,7 @@ int main() {
 
 void Array_list() {
     arrayList arrayList1;
-    RandomNumberGenerator r;
     int choice, variable, seed;
-    clock_t start, cpu_time;
     long long duration = 0;
 
     do {
@@ -61,8 +50,7 @@ void Array_list() {
              << "4) Display array \n"
              << "5) Max capacity of the array \n"
              << "6) Current number of elements in the array \n"
-             << "7) Execution time for last operation was {X} CPU time \n==================="
-             << "8) Clear array"<< endl;
+             << "7) Clear array\n==================="<< endl;
         cin >> choice;
         cout << "\n\n";
 
@@ -106,7 +94,7 @@ void Array_list() {
                         for (int i = 0; i < variable; i++) {
                             cout << "Enter value: " << endl;
                             cin >> choice;
-//                            arrayList1.add_to_random_pos(choice);
+                           //arrayList1.add_to_random_pos(choice);
                         }
                         cout << "\n\n";
                     }
@@ -123,19 +111,16 @@ void Array_list() {
                         cin >> seed;
                         switch (choice) {
                             case 1: {
-                                start = clock();
 
                                 Test test1(seed);
                                 duration = test1.arrayListAddToFront(arrayList1, variable);
 
                                 cout<<endl<<"Time: "<<duration<<endl;
 
-                                cpu_time = clock() - start;
                                 cout << "\n\n";
                                 break;
                             }
                             case 2: {
-                                start = clock();
 
                                 Test test1(seed);
                                 duration = test1.arrayListAddToBack(arrayList1, variable);
@@ -143,20 +128,17 @@ void Array_list() {
                                 cout<<endl<<"Time: "<<duration<<endl;
 
 
-                                cpu_time = clock() - start;
                                 cout << "\n\n";
                                 break;
                             }
 
                             case 3: {
-                                start = clock();;
 
                                 Test test1(seed);
                                 duration = test1.arrayListAddToRandom(arrayList1, variable);
 
                                 cout<<endl<<"Time: "<<duration<<endl;
 
-                                cpu_time = clock() - start;
                                 cout << "\n\n";
                                 break;
                             }
@@ -193,31 +175,26 @@ void Array_list() {
 
                         cout<<endl<<"Time: "<<duration<<endl;
 
-                        cpu_time = clock() - start;
                         cout << "\n\n";
                         break;
                     }
                     case 2: {
-                        start = clock();
 
                         Test test1(seed);
                         duration = test1.arrayListRemoveFromBack(arrayList1, variable);
 
                         cout<<endl<<"Time: "<<duration<<endl;
 
-                        cpu_time = clock() - start;
                         cout << "\n\n";
                         break;
                     }
                     case 3: {
-                        start = clock();
 
                         Test test1(seed);
                         duration = test1.arrayListRemoveFromRandom(arrayList1, variable);
 
                         cout<<endl<<"Time: "<<duration<<endl;
 
-                        cpu_time = clock() - start;
                         cout << "\n\n";
                         break;
                     }
@@ -233,14 +210,12 @@ void Array_list() {
             case 3: {
                 cout << "Type new seed for generating random number (8-15(\n";
                 cin >> seed;
-                start = clock();
 
                 Test test1(seed);
                 duration = test1.arrayListFindRandomNumber(arrayList1);
 
                 cout<<endl<<"Time: "<<duration<<endl;
 
-                cpu_time = clock() - start;
                 cout << "\n\n";
                 break;
             }
@@ -266,14 +241,8 @@ void Array_list() {
                 break;
             }
 
-            case 7:
-            {
-                printf("Execution time for last operation was %2d CPU time.\n", cpu_time);
-                cout << "\n\n";
-                break;
-            }
 
-            case 8: {
+            case 7: {
                 arrayList1.clear();
                 cout << "Array cleared.\n\n";
                 break;
@@ -287,8 +256,7 @@ void Array_list() {
 
 void Singly_Linked_list() {
     SinglyLinkedList list;
-    int choice, variable, many, seed;
-    clock_t start, cpu_time;
+    int choice, variable, seed;
     long long duration = 0;
 
     do {
@@ -297,8 +265,7 @@ void Singly_Linked_list() {
              << "3) Find random number in array \n"
              << "4) Display array \n"
              << "5) Current of the array \n"
-             << "6) Execution time for last operation was {X} CPU time \n==================="
-             << "7) Clear array" <<endl;
+             << "6) Clear array\n===================" <<endl;
         cin >> choice;
         cout << "\n\n";
 
@@ -359,32 +326,27 @@ void Singly_Linked_list() {
                         cin >> seed;
                         switch (choice) {
                             case 1: {
-                                start = clock();
 
                                 Test test1(seed);
                                 duration = test1.singlyLinkedListAddToFront(list, variable);
 
                                 cout<<endl<<"Time: "<<duration<<endl;
 
-                                cpu_time = clock() - start;
                                 cout << "\n\n";
                                 break;
                             }
                             case 2: {
-                                start = clock();
 
                                 Test test1(seed);
                                 duration = test1.singlyLinkedListAddToBack(list, variable);
 
                                 cout<<endl<<"Time: "<<duration<<endl;
 
-                                cpu_time = clock() - start;
                                 cout << "\n\n";
                                 break;
                             }
 
                             case 3: {
-                                start = clock();
 
                                 Test test1(seed);
                                 duration = test1.singlyLinkedListAddToRandom(list, variable);
@@ -392,7 +354,6 @@ void Singly_Linked_list() {
                                 cout<<endl<<"Time: "<<duration<<endl;
 
 
-                                cpu_time = clock() - start;
                                 cout << "\n\n";
                                 break;
                             }
@@ -422,7 +383,6 @@ void Singly_Linked_list() {
                 cout << "\n\n";
                 switch (choice) {
                     case 1: {
-                        start = clock();
 
                         Test test1(seed);
                         duration = test1.singlyLinkedListRemoveFromFront(list, variable);
@@ -430,31 +390,26 @@ void Singly_Linked_list() {
                         cout<<endl<<"Time: "<<duration<<endl;
 
 
-                        cpu_time = clock() - start;
                         cout << "\n\n";
                         break;
                     }
                     case 2: {
-                        start = clock();
 
                         Test test1(seed);
                         duration = test1.singlyLinkedListRemoveFromBack(list, variable);
 
                         cout<<endl<<"Time: "<<duration<<endl;
 
-                        cpu_time = clock() - start;
                         cout << "\n\n";
                         break;
                     }
                     case 3: {
-                        start = clock();
 
                         Test test1(seed);
                         duration = test1.singlyLinkedListRemoveFromRandom(list, variable);
 
                         cout<<endl<<"Time: "<<duration<<endl;
 
-                        cpu_time = clock() - start;
                         cout << "\n\n";
                         break;
                     }
@@ -470,20 +425,19 @@ void Singly_Linked_list() {
             case 3: {
                 cout << "Type new seed for generating random number (8-15(\n";
                 cin >> seed;
-                start = clock();
 
                 Test test1(seed);
                 duration = test1.singlyLinkedListFindRandomNumber(list);
 
                 cout<<endl<<"Time: "<<duration<<endl;
 
-                cpu_time = clock() - start;
                 cout << "\n\n";
                 break;
             }
 
             case 4: {
 
+                list.printAll();
 
                 cout << "\n\n";
                 break;
@@ -497,14 +451,7 @@ void Singly_Linked_list() {
             }
 
 
-            case 6:
-            {
-                printf("Execution time for last operation was %2d CPU time.\n", cpu_time);
-                cout << "\n\n";
-                break;
-            }
-
-            case 7: {
+            case 6: {
                 list.clear();
                 cout << "Array cleared.\n\n";
                 break;

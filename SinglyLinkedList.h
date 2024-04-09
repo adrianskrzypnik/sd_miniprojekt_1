@@ -150,6 +150,15 @@ public:
         }
         tail = nullptr;
     }
+    void printAll() {
+        Node* current = head;
+        while (current != nullptr) {
+            std::cout << current->data << " ";
+            current = current->next;
+        }
+        std::cout << std::endl;
+    }
+
 };
 
 
